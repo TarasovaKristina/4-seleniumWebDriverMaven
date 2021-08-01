@@ -6,27 +6,22 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MainPage {
+import java.util.List;
+
+public class ViewIssuesPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    @FindBy(css = "span.user-info")
-    private WebElement userName;
+    @FindBy(css = "#buglist tbody tr")
+    private List<WebElement> issuesList;
 
-    @FindBy(css = "a[href='/mantisbt/view_all_bug_page.php']")
-    private WebElement viewIssuePageButton;
-
-    public MainPage(WebDriver driver) {
+    public ViewIssuesPage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, 30, 500);
         PageFactory.initElements(driver, this);
     }
 
-    public String getUserName() {
-        return userName.getText();
-    }
-
-    public void goToViewIssuePage() {
-       viewIssuePageButton.click();
+    public int getiIssuesNamber() {
+        return issuesList.size();
     }
 }

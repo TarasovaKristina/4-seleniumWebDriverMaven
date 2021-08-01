@@ -8,7 +8,7 @@ public class SeleniumLocalDriverTests {
 
     @Test
     public void FillFormTest() throws InterruptedException {
-//        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\Chrom\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://academ-it.ru/mantisbt/login_page.php");
