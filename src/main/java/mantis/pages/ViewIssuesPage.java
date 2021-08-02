@@ -21,7 +21,7 @@ public class ViewIssuesPage {
         PageFactory.initElements(driver, this);
     }
 
-    public int getIssuesNamber() {
+    public int getIssuesNumber() {
         return issuesList.size();
     }
 }

@@ -51,7 +51,7 @@ public class MantisTests {
         mantisSite.login("admin", "admin20");
         mantisSite.getMainPage().goToViewIssuePage();
 
-        int issuesCount = mantisSite.getViewIssuesPage().getIssuesNamber();
+        int issuesCount = mantisSite.getViewIssuesPage().getIssuesNumber();
         Assertions.assertEquals(50, issuesCount);
         Thread.sleep(1000);
     }
